@@ -1,0 +1,28 @@
+package getbridgecard;
+/**
+ *
+ * @author Putri Santika Mayangsari_D_2057051011
+ */
+import java.util.Random;
+
+public class GetBridgeCard {
+    public static void main(String[] args) {
+        getBridgeCard();
+    }
+    static String getBridgeCard(){
+        
+    String[] charSet = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+    String[] charGam = {"\u2660","\u2663","\u2665","\u2666"};
+    
+    
+    Random setchoose = new Random();
+    Random gamchoose = new Random();
+    
+    System.out.print(charSet[setchoose.nextInt(13)]);
+    System.out.println(charGam[gamchoose.nextInt(4)]); 
+    
+    String value = charSet[setchoose.nextInt(charSet.length)]+charGam[gamchoose.nextInt(charGam.length)];
+    return value;
+    }
+    
+}
